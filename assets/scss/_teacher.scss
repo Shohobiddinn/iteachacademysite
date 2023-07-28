@@ -1,0 +1,117 @@
+.teacher_page {
+    background-color: var(--black-color);
+    padding: 210px 0 236px;
+
+    .container {
+        .teacher_page_top {
+            @include flex(flex-end, flex-start);
+            gap: 41px;
+            margin-bottom: 111px;
+
+            &_image {
+                img {
+                    width: 420px;
+                    height: 523px;
+                    object-fit: cover;
+                    border-radius: 23px;
+                }
+            }
+
+            &_content {
+                &_name {
+                    @include fond(700, 36);
+                    color: var(--white-color);
+                    margin-bottom: 10px;
+                }
+
+                &_title {
+                    @include fond(400, 24);
+                    color: var(--white-color);
+
+                }
+            }
+        }
+
+        .teacher_page_bottom {
+
+
+            &_content {
+                &_title {
+
+                    @include fond(500, 14);
+                    color: var(--white-color);
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:850px) {
+    .teacher_page {
+        .container {
+            .teacher_page_top {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .teacher_page_bottom {
+
+
+                &_content {
+                    &_title {
+
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:423px) {
+    .teacher_page {
+        padding-top: 180px;
+        .container {
+            .teacher_page_top {
+                margin-bottom: 90px;
+                &_image {
+                    width: 100%;
+                    @include flex(center, center);
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 157px;
+                        height: 196px;
+                    }
+                }
+
+                &_content {
+                    @include flex(center, center);
+                    flex-direction: column;
+
+                    &_name {
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+
+                    &_title {
+
+                        text-align: center;
+                    }
+                }
+            }
+            .teacher_page_bottom{
+                &_content{
+                    &_title{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}

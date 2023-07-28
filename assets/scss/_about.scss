@@ -1,0 +1,305 @@
+.about_page_top {
+
+    background-color: var(--black-color);
+    padding-top: 208px;
+
+    .container {
+        @include flex(flex-end, space-between);
+        gap: 94px;
+        padding-bottom: 89px;
+
+        .about_top_title {
+            max-width: 672px;
+            @include fond(600, 64);
+            color: var(--white-color);
+
+            span {
+                color: var(--pr-green-color);
+            }
+        }
+
+        .about_top_text {
+            @include fond(400, 14);
+            max-width: 474px;
+            color: var(--white-color);
+            transform: translateY(-20px);
+        }
+
+    }
+}
+
+.about_page_image {
+    // background-color: var(--black-color);
+    width: 100%;
+    height: 757px;
+
+    padding-bottom: 100px;
+    background-color: var(--black-color);
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 657px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.about_page_information {
+    background-color: var(--black-color);
+
+    .container {
+        border-top: 1px solid #fff;
+        padding: 100px 0 50px;
+        border-bottom: 1px solid #fff;
+
+        .content {
+            @include flex(flex-start, flex-start);
+            gap: 50px;
+
+            &_title {
+                @include fond(600, 64);
+                color: var(--white-color);
+                max-width: 532px;
+            }
+
+            &_text {
+                @include fond(400, 14);
+                color: var(--white-color);
+                max-width: 690px;
+            }
+        }
+    }
+}
+
+.about_page_bottom {
+    background-color: var(--black-color);
+    padding: 100px 0 361px;
+
+    .container {
+        .about_bottom_title {
+            @include fond (600, 64);
+            color: var(--white-color);
+            max-width: 50%;
+            margin-bottom: 90px;
+        }
+
+        .about_bottom_contents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 78px;
+
+            .peoples {
+                width: 251px;
+
+                .people {
+
+                    &_image {
+                        width: 100%;
+                        height: 309px;
+                        margin-bottom: 30px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &_name {
+                        @include fond(600, 20);
+                        color: var(--white-color);
+                        text-align: center;
+                        text-transform: capitalize;
+                        margin-bottom: 10px;
+                    }
+
+                    &_title {
+                        @include fond(400, 16);
+                        color: var(--white-color);
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .about_page_top {
+        .container {
+            flex-direction: column;
+            align-items: center;
+
+            .about_top_title {
+                text-align: center;
+            }
+
+            .about_top_text {
+                text-align: center;
+            }
+        }
+    }
+
+    .about_page_information {
+        .container {
+            .content {
+                flex-direction: column;
+                align-items: center;
+
+                &_title {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+
+                &_text {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .about_page_bottom {
+        .container {
+            .about_bottom_title {
+                max-width: 100%;
+                text-align: center;
+                @include flex(center, center);
+
+
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .about_page_image {
+        .container {
+            img {
+                height: 500px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:450px) {
+    .about_page_top {
+
+        .container {
+            .about_top_title {
+                font-size: 28px;
+                // background-color: red;
+
+                span {
+                    font-size: 28px;
+                }
+            }
+
+            .about_top_text {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .about_page_information {
+        .container {
+            .content {
+                &_title {
+                    font-size: 25px;
+                }
+
+                &_text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .about_page_bottom {
+        .container {
+            .about_bottom_title {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width:390px) {
+    .about_page_top {
+        .container {
+            .about_top_title {
+                font-size: 20px;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            .about_top_text {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .about_page_image {
+        .container {
+            img {
+                height: 400px;
+            }
+        }
+    }
+
+    .about_page_information {
+        .container {
+            .content {
+                &_title {
+                    font-size: 24px;
+                }
+
+                &_text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .about_page_bottom {
+        .container {
+            .about_bottom_title {
+                font-size: 24px;
+            }
+
+        }
+    }
+}
+
+@media (max-width:360px) {
+    .about_page_top {
+        .container {
+            .about_top_title {
+                font-size: 20px;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .about_page_information {
+        .container {
+            .content {
+                &_text {
+                    width: 280px;
+                }
+            }
+        }
+    }
+
+}
