@@ -12,7 +12,7 @@
           <img
             ref="moon"
             class="moon_rotate"
-            src="../assets/images/overheating-planet-earth-global-warming-campaign-mixed-media-transformed 2.png"
+            src="../assets/images/moonimage.png"
             alt=""
           />
         </div>
